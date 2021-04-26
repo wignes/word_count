@@ -1,0 +1,15 @@
+<h1>Word Count Result</h1>
+<br />
+Count : {{ word_count }}
+<br>
+<a href="{% url 'home' %}">Home Page</a>
+<a href="{% url 'about' %}">About Page</a>
+<br /><br />
+Your Text:
+{{ your_text }}
+<br>
+<br>
+{% for word,count in word_dict %}
+{{ word }} :: {{ count }}
+<br>
+{% endfor %}
